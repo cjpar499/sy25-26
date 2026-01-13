@@ -30,7 +30,7 @@ while True:
             print("Invalid duration. Please enter a number.")
         else:
             lineup.append((name, genre, duration))
-            print(f"{name} added")
+            print(name + " added")
 
     elif choice == "3":
         if lineup:
@@ -47,7 +47,7 @@ while True:
                 print(f"{name_to_remove} removed.")
                 break
         else:
-            print(f"No band found with the name {name_to_remove}.")
+            print(f"Band {name_to_remove} not found.")
 
     elif choice == "5":
         name_to_move = input("Enter the name of the band to move: ")
@@ -65,7 +65,7 @@ while True:
             print("Invalid position. Please enter a number.")
 
     elif choice == "6":
-        print("Exiting Pyfest Lineup Stage Management. Goodbye!")
+        print("Exiting Stage Manager. Have a great show!")
         break
 
     else:
