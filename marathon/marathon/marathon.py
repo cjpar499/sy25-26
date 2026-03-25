@@ -6,6 +6,7 @@ mile_splits.append(8.3)
 print(mile_splits)
 
 print(runner_info[0], sum (mile_splits))
+
 total_time=0
 total_miles=0
 for split in mile_splits:
