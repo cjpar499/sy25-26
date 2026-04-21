@@ -1,4 +1,4 @@
-this is thingy ma bob
+
 Justin- Quality Test Assurance, Split Developer
 Cole- Product Manager, split developer
 
@@ -14,4 +14,5 @@ Product Goal:
 	4. The cost of tax
 	5.Availability 
 	6. Number of reviews
-4. If the user
+4. If the user looks up the name of the book and it does not exist then it will print out a message saying 
+"Invalid book, name try again".
