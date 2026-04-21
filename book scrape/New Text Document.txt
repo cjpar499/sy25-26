@@ -1,2 +1,17 @@
 this is thingy ma bob
 Justin- Quality Test Assurance, Split Developer
+Cole- Product Manager, split developer
+
+Product Goal:
+1. Scrape the book website.
+
+2. Allow user to look up the name of books
+
+3. Once book is found display the following info
+	1. UPC
+	2. The price before tax
+	3. The price after tax
+	4. The cost of tax
+	5.Availability 
+	6. Number of reviews
+4. If the user
