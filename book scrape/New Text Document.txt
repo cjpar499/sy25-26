@@ -16,3 +16,5 @@ Product Goal:
 	6. Number of reviews
 4. If the user looks up the name of the book and it does not exist then it will print out a message saying 
 "Invalid book, name try again".
+
+5. If the user types exit into the search bar it quits the program 
