@@ -20,7 +20,7 @@ def scrape_with_permission(target_url):
         can_scrape = True
 
     if not can_scrape:
-        print(f"🚫 Access Denied: {target_url} is restricted by robots.txt")
+        print(f" Access Denied: {target_url} is restricted by robots.txt")
         return None
     return True
 
@@ -32,7 +32,7 @@ def find_book_url(book_name, base_url):
         headers = {'User-Agent': "EducationalScraperBot/1.0"}
         response = requests.get(page_url, headers=headers, timeout=900)
         if response.status_code != 200:
-            print(f"❌ Failed to fetch page {page}: {response.status_code}")
+            print(f" Failed to fetch page {page}: {response.status_code}")
             break
         soup = BeautifulSoup(response.text, 'html.parser')
         articles = soup.find_all('article', class_='product_pod')
@@ -54,7 +54,7 @@ def extract_book_details(book_url):
     headers = {'User-Agent': "EducationalScraperBot/1.0"}
     response = requests.get(book_url, headers=headers, timeout=10)
     if response.status_code != 200:
-        print(f"❌ Failed to fetch book details: {response.status_code}")
+        print(f" Failed to fetch book details: {response.status_code}")
         return None
     soup = BeautifulSoup(response.text, 'html.parser')
 
@@ -90,16 +90,16 @@ def lookup_book(book_name):
     if not scrape_with_permission(base_url):
         return False
 
-    print(f"🔎 Searching for book: '{book_name}' ...")
+    print(f" Searching for book: '{book_name}' ...")
     book_url = find_book_url(book_name, base_url)
     if not book_url:
         print("Invalid book name, try again")
         return False
 
-    print(f"✅ Book found: {book_url}")
+    print(f" Book found: {book_url}")
     details = extract_book_details(book_url)
     if not details:
-        print("❌ Failed to extract book details.")
+        print(" Failed to extract book details.")
         return False
 
     print("\n--- Book Details ---")
